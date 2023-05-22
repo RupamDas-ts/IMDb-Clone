@@ -51,13 +51,13 @@ function displaySearchResults(results) {
     listItem.appendChild(titleElement);
 
     const favoriteButton = document.createElement('button');
-    favoriteButton.innerHTML = '<i class="fas fa-heart"></i>';
+    favoriteButton.innerHTML = '<i class="fas fa-heart heart-button"></i>';
     favoriteButton.classList.add('btn', 'btn-primary','add-to-favorites-button');
     listItem.appendChild(favoriteButton);
 
     // Adding eventlistner to the search results
     listItem.addEventListener('click',(e) => {
-      if(e.target === favoriteButton){
+      if(e.target === favoriteButton || e.target.classList.contains('heart-button')){
         // If it is the favourite button then add it to tha favourite list
         addToFavorites(movie);
         
@@ -147,7 +147,7 @@ searchInput.addEventListener('input', searchMovies);
 // Render favorite movies on page load
 renderFavorites();
 
-// Add functionality for the add-favourite button
+// Add functionality for the favourite button
 const favButton = document.getElementById('favourite-button');
 favButton.addEventListener('click',()=>{
   window.location.href = `favourites.html?favorites=${encodeURIComponent(JSON.stringify(favoriteMovies))}`;
