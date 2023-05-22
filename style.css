@@ -1,0 +1,70 @@
+body{
+    background: repeating-linear-gradient( 0deg, #ffffff, #e9d69c 1%, #912e2e 1%, #dada12 1% );
+}
+
+.navbar>.container-fluid{
+    flex-direction: row-reverse;
+}
+
+.favourite-button{
+    background: crimson;
+    padding: 0.5%;
+    border: 1px solid;
+    border-radius: 10%;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#search-input{
+    width: 100%;
+    border: 0px;
+}
+
+.search-icon{
+    background-color: burlywood;
+}
+
+input#search-input:focus-visible {
+    outline: none;
+    border: none;
+}
+
+#searchList{
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.search-list-items{
+    margin-bottom: 10px;
+    border: 1px solid lightgrey !important;
+    background-color: whitesmoke !important;
+    padding: 2% !important;
+}
+
+.search-list-items:hover{
+    background-color: grey !important;
+}
+
+.thumbnail-image{
+    width: 60px;
+    height: 75px;
+}
+
+.movie-details-in-list{
+    font-family: monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-container{
+    min-width: 200px !important;
+    max-width: 200px !important;
+}
+    

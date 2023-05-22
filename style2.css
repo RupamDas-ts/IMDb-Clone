@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: repeating-linear-gradient( 0deg, #ffffff, #e9d69c 1%, #912e2e 1%, #dada12 1% );
+}
+
+#movie-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: floralwhite;
+    padding: 5%;
+}
+
+.sections{
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    margin: 4vh 0;
+}
+
+.section-title{
+    font-weight: bold;
+}
