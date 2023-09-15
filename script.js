@@ -37,7 +37,7 @@ function displaySearchResults(results) {
 
   results.forEach((movie) => {
     const listItem = document.createElement('li');
-    listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center','search-list-items','custom-class-for-test','custom-class-for-test-li');
+    listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center','search-list-items','custom-class-li');
 
     const posterImage = document.createElement('img');
     posterImage.src = movie.Poster !== 'N/A' ? movie.Poster : 'placeholder.jpg';
@@ -46,13 +46,13 @@ function displaySearchResults(results) {
     listItem.appendChild(posterImage);
 
     const titleElement = document.createElement('span');
-    titleElement.classList.add('movie-details-in-list','custom-class-for-test','custom-class-for-test-title')
+    titleElement.classList.add('movie-details-in-list','custom-class-title')
     titleElement.textContent = movie.Title;
     listItem.appendChild(titleElement);
 
     const favoriteButton = document.createElement('button');
     favoriteButton.innerHTML = '<i class="fas fa-heart heart-button"></i>';
-    favoriteButton.classList.add('btn', 'btn-primary','add-to-favorites-button','custom-class-for-test','custom-class-for-test-button');
+    favoriteButton.classList.add('btn', 'btn-primary','add-to-favorites-button','custom-class-button');
     listItem.appendChild(favoriteButton);
 
     // Adding eventlistner to the search results
@@ -103,7 +103,7 @@ function renderFavorites() {
       const posterImage = document.createElement('img');
       posterImage.src = movie.Poster !== 'N/A' ? movie.Poster : 'placeholder.jpg';
       posterImage.alt = movie.Title;
-      posterImage.classList.add('card-img-top','custom-card-image','custom-class-for-test','custom-class-for-test-image');
+      posterImage.classList.add('card-img-top','custom-card-image','custom-class-image');
       card.appendChild(posterImage);
   
       const cardBody = document.createElement('div');
@@ -111,17 +111,17 @@ function renderFavorites() {
   
       const titleElement = document.createElement('h5');
       titleElement.textContent = movie.Title;
-      titleElement.classList.add('card-title','custom-class-for-test','custom-class-for-test-title');
+      titleElement.classList.add('card-title','custom-class-title');
       cardBody.appendChild(titleElement);
   
       const yearElement = document.createElement('p');
       yearElement.textContent = `Year: ${movie.Year}`;
-      yearElement.classList.add('card-text','custom-class-for-test','custom-class-for-test-year');
+      yearElement.classList.add('card-text','custom-class-year');
       cardBody.appendChild(yearElement);
   
       const removeButton = document.createElement('button');
       removeButton.textContent = 'Remove';
-      removeButton.classList.add('btn', 'btn-danger','custom-class-for-test','custom-class-for-test-button');
+      removeButton.classList.add('btn', 'btn-danger','custom-class-button');
       // Add Evenet Listner for the Remove Button
       removeButton.addEventListener('click', () => {
         removeFromFavorites(index);
