@@ -37,7 +37,7 @@ function displaySearchResults(results) {
 
   results.forEach((movie) => {
     const listItem = document.createElement('li');
-    listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center','search-list-items','custom-class-for-test','custom-class-li');
+    listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center','search-list-items','custom-class-for-test','custom-class-for-test-li');
 
     const posterImage = document.createElement('img');
     posterImage.src = movie.Poster !== 'N/A' ? movie.Poster : 'placeholder.jpg';
