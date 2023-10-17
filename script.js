@@ -37,7 +37,7 @@ function displaySearchResults(results) {
 
   results.forEach((movie) => {
     const listItem = document.createElement('li');
-    listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center','search-list-items','custom-class-li','custom-class-for-test-li');
+    listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center','search-list-items','custom-class-li');
 
     const posterImage = document.createElement('img');
     posterImage.src = movie.Poster !== 'N/A' ? movie.Poster : 'placeholder.jpg';
@@ -52,7 +52,7 @@ function displaySearchResults(results) {
 
     const favoriteButton = document.createElement('button');
     favoriteButton.innerHTML = '<i class="fas fa-heart heart-button"></i>';
-    favoriteButton.classList.add('btn', 'btn-primary','add-to-favorites-button','custom-class-button','custom-class-for-test-button');
+    favoriteButton.classList.add('btn', 'btn-primary','add-to-favorites-button','custom-class-button');
     listItem.appendChild(favoriteButton);
 
     // Adding eventlistner to the search results
@@ -111,7 +111,7 @@ function renderFavorites() {
   
       const titleElement = document.createElement('h5');
       titleElement.textContent = movie.Title;
-      titleElement.classList.add('card-title','custom-class-title','custom-class-for-test-title');
+      titleElement.classList.add('card-title','custom-class-title');
       cardBody.appendChild(titleElement);
   
       const yearElement = document.createElement('p');
